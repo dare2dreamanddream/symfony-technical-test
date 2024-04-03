@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% if not result is defined %}
+    {% set result = '' %}
+{% endif %}
+
+{% block title %}Dev Test Calculator - Dan Pieczonka{% endblock %}
+
+{% block body %}
+    <div>
+        {{ form_start(form, { 'attr': {'autocomplete': 'off'} }) }}
+        {{ form_errors(form) }}
+        {{ form_end(form) }}
+        <br><br>
+        Calculation Result: {{ result }}
+    </div>
+{% endblock %}
